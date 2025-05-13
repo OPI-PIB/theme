@@ -1,0 +1,42 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: var(--color__border-button);
+  border-radius: var(--shape-xs);
+  background: var(--color__background-button);
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+
+  &:hover {
+    border-color: var(--color__border-button-hover);
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--color__border-button-focus);
+  }
+}
+
+/* Disabled state */
+// button:disabled,
+// a.button[aria-disabled="true"] {
+//   background-color: #cccccc;
+//   color: #666666;
+//   border-color: #cccccc;
+//   cursor: not-allowed;
+//   pointer-events: none;
+// }
+
+/* Dla linków w roli przycisków */
+// a.button {
+//   role: button;
+// }
+
+/* Opcjonalnie: animacja focus-visible (dla lepszej dostępności) */
+// button:focus-visible,
+// a.button:focus-visible {
+//   box-shadow: 0 0 0 3px rgba(255, 191, 71, 0.7);
+// }

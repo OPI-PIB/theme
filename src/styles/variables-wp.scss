@@ -1,0 +1,42 @@
+/* Based on https://github.com/automattic/_s */
+
+/**
+
+In file https://github.com/Automattic/_s/blob/master/sass/abstracts/_abstracts.scss
+replace this two imports:
+@import "variables/colors";
+@import "variables/typography";
+
+with this file variables-wp.scss
+@import "variables/variables-wp";
+
+*/
+
+/* Colors */
+$color__background-body: var(--color__background-body);
+$color__background-screen: var(--color__background-screen);
+$color__background-hr: var(--color__background-hr);
+$color__background-button: var(--color__background-button);
+$color__background-pre: var(--color__background-pre);
+$color__background-ins: var(--color__background-ins);
+
+$color__text-screen: var(--color__text-screen);
+$color__text-input: var(--color__text-input);
+$color__text-input-focus: var(--color__text-input-focus);
+$color__link: var(--color__link);
+$color__link-visited: var(--color__link-visited);
+$color__link-hover: var(--color__link-hover);
+$color__text-main: var(--color__text-main);
+
+$color__border-button: var(--color__border-button);
+$color__border-button-hover: var(--color__border-button-hover);
+$color__border-button-focus: var(--color__border-button-focus);
+$color__border-input: var(--color__border-input);
+$color__border-abbr: var(--color__border-abbr);
+
+/* Fonts */
+$font__main: var(--font__main);
+$font__code: var(--font__code);
+$font__pre: var(--font__pre);
+$font__line-height-body: var(--font__line-height-body);
+$font__line-height-pre: var(--font__line-height-pre);
