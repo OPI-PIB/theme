@@ -37,10 +37,7 @@ input[type="submit"] {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 
-    &:hover {
-      background-color: var(--color-primary-hover);
-    }
-
+    &:hover,
     &:active,
     &:focus-visible {
       background-color: var(--color-primary-hover);
@@ -58,10 +55,7 @@ input[type="submit"] {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
 
-    &:hover {
-      background-color: var(--color-secondary-hover);
-    }
-
+    &:hover,
     &:active,
     &:focus-visible {
       background-color: var(--color-secondary-hover);
