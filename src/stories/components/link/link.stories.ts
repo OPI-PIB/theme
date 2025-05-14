@@ -13,7 +13,7 @@ export default meta;
 type Story = StoryObj<LinkComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Default: Story = {
+export const Link: Story = {
   args: {
     label: "Link",
   },
