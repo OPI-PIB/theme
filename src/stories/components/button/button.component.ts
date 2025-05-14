@@ -1,20 +1,39 @@
 import { CommonModule } from "@angular/common";
 import { Component, computed, input } from "@angular/core";
-import { Size, sizes, Variant, variants } from "../../config";
+import { Size, Variant } from "../../config";
 
 @Component({
   selector: "app-button",
   imports: [CommonModule],
-  template: `<button type="button" [ngClass]="classes()">
-    {{ label() }}
-  </button>`,
+  template: `
+    <p>Default</p>
+    <button type="button" [disabled]="disabled()" [ngClass]="classes()">
+      {{ label() }}
+    </button>
+    <p>Primary</p>
+    <button
+      type="button"
+      [disabled]="disabled()"
+      [ngClass]="['variant-primary', classes()]"
+    >
+      {{ label() }}
+    </button>
+    <p>Secondary</p>
+    <button
+      type="button"
+      [disabled]="disabled()"
+      [ngClass]="['variant-secondary', classes()]"
+    >
+      {{ label() }}
+    </button>
+  `,
 })
 export class ButtonComponent {
-  label = input<string>();
+  label = input.required<string>();
 
-  variant = input<Variant>(variants[0]);
+  size = input.required<Size>();
 
-  size = input<Size>(sizes[0]);
+  disabled = input.required<boolean>();
 
-  classes = computed(() => [this.variant(), this.size()].join(" "));
+  classes = computed(() => [this.size()].join(" "));
 }

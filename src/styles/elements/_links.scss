@@ -6,12 +6,12 @@ a {
   }
 
   &:hover,
-  &:focus,
+  &:focus-visible,
   &:active {
     color: var(--color__link-hover);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: thin dotted;
   }
 
