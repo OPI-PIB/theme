@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { Component, computed, input } from "@angular/core";
-import { Size, Variant } from "../../config";
+import { Size } from "../../config";
 
 @Component({
   selector: "app-button",

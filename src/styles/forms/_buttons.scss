@@ -6,8 +6,8 @@ input[type="submit"] {
   border-radius: var(--shape);
   background: var(--background);
   color: var(--color-primary);
-  padding: var(--space-8) var(--space-16);
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: var(--font-size-md);
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
@@ -68,13 +68,22 @@ input[type="submit"] {
     }
   }
 
-  &.size-small {
-    font-size: 0.75rem;
-    padding: var(--space-4) var(--space-8);
+  &.variant-icon {
+    background-color: transparent;
+    border-color: transparent;
+
+    > span:first-of-type {
+      font-size: var(--font-size-lg);
+    }
   }
 
-  &.size-large {
-    font-size: 1rem;
-    padding: var(--space-12) var(--space-24);
+  &.size-sm {
+    font-size: var(--font-size-sm);
+    padding: 4px 8px;
+  }
+
+  &.size-lg {
+    font-size: var(--font-size-lg);
+    padding: 12px 24px;
   }
 }

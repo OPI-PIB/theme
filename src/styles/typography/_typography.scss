@@ -6,7 +6,7 @@ optgroup,
 textarea {
   color: var(--color__text-main);
   font-family: var(--font__main);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: var(--font__line-height-body);
   font-optical-sizing: auto;
   font-weight: 400;
