@@ -1,13 +1,14 @@
 details {
+  --shape: 0;
+
   border: 1px solid var(--border);
   border-radius: var(--shape);
-  margin-bottom: 8px;
-  padding: 8px;
-  width: 300px;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  width: 100%;
 }
 
 summary {
-  font-weight: bold;
   cursor: pointer;
 }
 

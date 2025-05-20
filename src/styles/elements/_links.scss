@@ -1,18 +1,18 @@
 a {
-  color: var(--link);
+  color: var(--color-link);
 
   &:visited {
-    color: var(--link-visited);
+    color: var(--color-link-visited);
   }
 
   &:hover,
   &:focus-visible,
   &:active {
-    color: var(--link-hover);
+    color: var(--color-link-hover);
   }
 
   &:focus-visible {
-    outline: 2px dashed currentColor;
+    outline: 2px dashed var(--color-link);
     outline-offset: 2px;
   }
 

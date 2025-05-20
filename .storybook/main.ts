@@ -1,7 +1,11 @@
 import type { StorybookConfig } from "@storybook/angular";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../src/**/*.stories.ts"],
+  staticDirs: ["../src/stories/assets"],
+  core: {
+    disableTelemetry: true,
+  },
   addons: [
     {
       name: "@storybook/addon-essentials",

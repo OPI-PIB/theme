@@ -4,9 +4,9 @@ input,
 select,
 optgroup,
 textarea {
-  color: var(--color__text-main);
-  font-family: var(--font__main);
-  font-size: var(--font-size-md);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--font__size-md);
   line-height: var(--font__line-height-body);
   font-optical-sizing: auto;
   font-weight: 400;
@@ -15,5 +15,5 @@ textarea {
 }
 
 .font-mono {
-  font-family: var(--font__code);
+  font-family: var(--font-code);
 }

@@ -2,9 +2,8 @@ import type { Meta, StoryObj } from "@storybook/angular";
 
 import { AccordionComponent } from "./accordion.component";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<AccordionComponent> = {
-  title: "Accordions",
+  title: "Accordion",
   component: AccordionComponent,
   argTypes: {},
 };
@@ -12,7 +11,6 @@ const meta: Meta<AccordionComponent> = {
 export default meta;
 type Story = StoryObj<AccordionComponent>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Accordion: Story = {
   args: {},
 };

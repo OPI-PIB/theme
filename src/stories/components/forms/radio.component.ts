@@ -4,14 +4,18 @@ import { Component } from "@angular/core";
   selector: "app-radio",
   imports: [],
   template: `
-    <div>
-      <input type="radio" name="radioGroup" id="radio1Id" />
-      <label for="radio1Id">Radio 1</label>
-    </div>
-    <div>
-      <input type="radio" name="radioGroup" id="radio2Id" />
-      <label for="radio2Id">Radio 2</label>
-    </div>
+    <fieldset>
+      <legend>Choose your favorite monster</legend>
+
+      <input type="radio" id="kraken" name="monster" value="K" />
+      <label for="kraken">Kraken</label><br />
+
+      <input type="radio" id="sasquatch" name="monster" value="S" />
+      <label for="sasquatch">Sasquatch</label><br />
+
+      <input type="radio" id="mothman" name="monster" value="M" />
+      <label for="mothman">Mothman</label>
+    </fieldset>
   `,
   styles: ``,
 })

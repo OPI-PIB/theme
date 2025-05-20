@@ -1,17 +1,17 @@
 .alert {
-  --link: var(--text);
-  --link-hover: var(--text);
-  --link-visited: var(--text);
+  --color-link: var(--text);
+  --color-link-hover: var(--text);
+  --color-link-visited: var(--text);
   --text-on-color: var(--text);
 
   display: flex;
-  gap: 16px;
+  gap: var(--space-md);
   justify-content: space-between;
   align-items: start;
   border: 1px solid;
 
   > div:first-of-type {
-    padding: 8px 16px;
+    padding: var(--space-sm) var(--space-md);
   }
 
   &.variant-info {

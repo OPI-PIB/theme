@@ -2,63 +2,76 @@
   /* colors */
   --text: light-dark(#000, #fff);
   --text-on-color: light-dark(#fff, #000);
+  --background: light-dark(#fff, #000);
+  --background-pre: #eee;
+  --background-ins: #fff9c0;
+  --border: #999;
 
-  --text-disabled: #666;
+  --text-disabled: light-dark(#666, #fff);
+  --border-disabled: #999;
   --background-disabled: #ccc;
 
   --color-info: #cff4fc;
-  --color-info-border: #9ec5fe;
+  --color-info-border: hsl(from var(--color-info) h s calc(l - 10));
 
   --color-success: #d1e7dd;
-  --color-success-border: #a3cfbb;
+  --color-success-border: hsl(from var(--color-success) h s calc(l - 10));
 
   --color-warning: #fff3cd;
-  --color-warning-border: #ffe69c;
+  --color-warning-border: hsl(from var(--color-warning) h s calc(l - 10));
 
   --color-danger: #f8d7da;
-  --color-danger-border: #f1aeb5;
+  --color-danger-border: hsl(from var(--color-danger) h s calc(l - 10));
 
-  --color-primary: light-dark(#1e3264, #8ab4f8);
-  --color-primary-hover: light-dark(#2b4a8b, #a3c1ff);
+  --color-primary: #1e3264;
+  --color-primary-hover: hsl(from var(--color-primary) h s calc(l + 10));
 
-  --color-secondary: light-dark(#0f62fe, #5c99ff);
-  --color-secondary-hover: light-dark(#408bff, #82b3ff);
+  --color-secondary: #0f62fe;
+  --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
 
-  --link: #4169e1;
-  --link-hover: #191970;
-  --link-visited: #800080;
+  --color-link: #4169e1;
+  --color-link-hover: hsl(from var(--color-link) h s calc(l - 20));
+  --color-link-visited: #800080;
 
-  --background: light-dark(#fff, #000);
-  --background-hover: light-dark(#b9d4ff, #000);
-
-  --border: #666;
+  --button-text: var(--color-primary);
+  --button-background: #fff;
+  --button-background-hover: #b9d4ff;
+  --button-border: var(--color-primary);
 
   /* typography */
-  --font__main: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font__code: "Roboto Mono", monaco, consolas, "Andale Mono",
+  --font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-code: "Roboto Mono", monaco, consolas, "Andale Mono",
     "DejaVu Sans Mono", monospace;
-  --font__pre: "Courier 10 Pitch", courier, monospace;
-  --font__line-height-tight: 1.2;
+
+  --font__line-height-tight: 1.15;
   --font__line-height-body: 1.5;
   --font__line-height-pre: 1.6;
-  --font-size-xs: 0.75rem; /* 12 px – np. metadane, caption */
-  --font-size-sm: 0.875rem; /* 14 px – tekst pomocniczy */
-  --font-size-md: 1rem; /* 16 px – kopia podstawowa */
-  --font-size-lg: 1.125rem; /* 18 px – lead, większe przyciski */
-  --font-size-xl: 1.25rem; /* 20 px – minor heading */
-  --font-size-2xl: 1.5rem; /* 24 px – h4-h5, hero subheading */
-  --font-size-3xl: clamp(1.75rem, 1.55rem + 0.9vw, 2.25rem); /* h3 */
-  --font-size-4xl: clamp(2.1rem, 1.8rem + 1.4vw, 3rem); /* h2 */
-  --font-size-5xl: clamp(2.5rem, 2.1rem + 2.2vw, 4rem); /* h1 / hero */
+
+  --font__size-xs: 0.75rem; /* 12 px – np. metadane, caption */
+  --font__size-sm: 0.875rem; /* 14 px – tekst pomocniczy */
+  --font__size-md: 1rem; /* 16 px – kopia podstawowa */
+  --font__size-lg: 1.125rem; /* 18 px – lead, większe przyciski */
+  --font__size-xl: 1.25rem; /* 20 px – minor heading */
+  --font__size-2xl: 1.5rem; /* 24 px – h4-h5, hero subheading */
+  --font__size-3xl: 1.75rem; /* h3 */
+  --font__size-4xl: 2.1rem; /* h2 */
+  --font__size-5xl: 2.5rem; /* h1 / hero */
+
+  --font__weight-light: 300;
+  --font__weight: 400;
+  --font__weight-bold: 700;
 
   /* shapes */
-  --shape: 8px;
+  --shape: 0.5rem;
 
   /* spacing */
-  --space-4: 4px;
-  --space-8: 8px;
-  --space-12: 12px;
-  --space-16: 16px;
-  --space-24: 24px;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  --min-dialog-width: 300px;
+  --max-dialog-width: 80%;
 }

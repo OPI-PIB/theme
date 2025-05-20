@@ -4,7 +4,7 @@ import { Component, OnInit } from "@angular/core";
   selector: "app-dialog",
   imports: [],
   template: `
-    <button id="openDialog">Open Dialog</button>
+    <button id="openDialog">Open dialog</button>
 
     <dialog id="myDialog">
       <p>This is a dialog opened with JavaScript!</p>
