@@ -66,11 +66,13 @@
   --shape: 0.5rem;
 
   /* spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  --space-xs: 0.25rem; /* 4 px */
+  --space-sm: 0.5rem; /* 8 px */
+  --space-md: 1rem; /* 16 px */
+  --space-lg: 1.5rem; /* 24 px */
+  --space-xl: 2rem; /* 32 px */
+  --space-2xl: 3rem; /* 48 px */
+  --space-3xl: 4rem; /* 64 px */
 
   --min-dialog-width: 300px;
   --max-dialog-width: 80%;
