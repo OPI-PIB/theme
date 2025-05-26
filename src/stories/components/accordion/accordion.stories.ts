@@ -12,5 +12,8 @@ export default meta;
 type Story = StoryObj<AccordionComponent>;
 
 export const Accordion: Story = {
-  args: {},
+  args: {
+    label: "Title for Panel",
+    content: "Content for Panel",
+  },
 };

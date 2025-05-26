@@ -1,1 +1,3 @@
-@use "abstracts/variables";
+@layer variables {
+  @import "abstracts/variables";
+}

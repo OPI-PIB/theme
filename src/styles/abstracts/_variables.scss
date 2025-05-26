@@ -5,7 +5,7 @@
   --background: light-dark(#fff, #000);
   --background-pre: #eee;
   --background-ins: #fff9c0;
-  --border: #999;
+  --border: #e8e8e8;
 
   --text-disabled: light-dark(#666, #fff);
   --border-disabled: #999;
@@ -25,21 +25,26 @@
 
   --color-primary: #1e3264;
   --color-primary-hover: hsl(from var(--color-primary) h s calc(l + 10));
+  --color-primary-active: hsl(from var(--color-primary) h s calc(l - 5));
 
   --color-secondary: #0f62fe;
   --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
+  --color-secondary-active: hsl(from var(--color-secondary) h s calc(l - 5));
 
   --color-link: #4169e1;
-  --color-link-hover: hsl(from var(--color-link) h s calc(l - 20));
+  --color-link-hover: hsl(from var(--color-link) h s calc(l - 10));
   --color-link-visited: #800080;
+
+  --color-outline: light-dark(#000, #ccc);
 
   --button-text: var(--color-primary);
   --button-background: #fff;
   --button-background-hover: #b9d4ff;
+  --button-background-active: #fff;
   --button-border: var(--color-primary);
 
   /* typography */
-  --font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --font: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-code: "Roboto Mono", monaco, consolas, "Andale Mono",
     "DejaVu Sans Mono", monospace;
@@ -61,6 +66,10 @@
   --font__weight-light: 300;
   --font__weight: 400;
   --font__weight-bold: 700;
+
+  /* icons */
+  --font-icon: "Material Symbols Outlined";
+  --font-icon__size: 20px;
 
   /* shapes */
   --shape: 0.5rem;

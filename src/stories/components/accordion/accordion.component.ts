@@ -1,39 +1,58 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, input, OnDestroy, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-accordion",
   imports: [],
   template: `
     <details>
-      <summary>Panel 1</summary>
-      <div>Content for Panel 1</div>
-    </details>
-
-    <details>
-      <summary>Panel 2</summary>
-      <div>Content for Panel 2</div>
+      <summary>{{ label() }} 1</summary>
+      {{ content() }} 1
     </details>
     <details>
-      <summary>Panel 3</summary>
-      <div>Content for Panel 3</div>
+      <summary>{{ label() }} 2</summary>
+      {{ content() }} 2
+    </details>
+    <details>
+      <summary>{{ label() }} 3</summary>
+      {{ content() }} 3
     </details>
   `,
   styles: ``,
 })
-export class AccordionComponent implements OnInit {
-  ngOnInit(): void {
-    const allDetails = document.querySelectorAll("details");
+export class AccordionComponent implements OnInit, OnDestroy {
+  label = input.required<string>();
 
-    allDetails.forEach((targetDetail) => {
-      targetDetail.addEventListener("toggle", () => {
-        if (targetDetail.open) {
-          allDetails.forEach((detail) => {
-            if (detail !== targetDetail) {
-              detail.removeAttribute("open");
+  content = input.required<string>();
+
+  private listeners: Array<{
+    detail: HTMLDetailsElement;
+    handler: () => void;
+  }> = [];
+
+  ngOnInit(): void {
+    const allDetails = Array.from(
+      document.querySelectorAll<HTMLDetailsElement>("details")
+    );
+
+    allDetails.forEach((detail) => {
+      const handler = () => {
+        if (detail.open) {
+          allDetails.forEach((d) => {
+            if (d !== detail) {
+              d.removeAttribute("open");
             }
           });
         }
-      });
+      };
+
+      detail.addEventListener("toggle", handler);
+      this.listeners.push({ detail, handler });
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.listeners.forEach(({ detail, handler }) => {
+      detail.removeEventListener("toggle", handler);
     });
   }
 }

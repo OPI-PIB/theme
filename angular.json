@@ -54,7 +54,9 @@
               }
             ],
             "styles": [
+              "src/styles/layers.scss",
               "src/styles/fonts.scss",
+              "src/styles/icons.scss",
               "src/styles/variables.scss",
               "src/styles/normalize.scss",
               "src/styles/theme.scss"

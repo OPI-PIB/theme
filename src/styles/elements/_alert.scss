@@ -6,12 +6,12 @@
 
   display: flex;
   gap: var(--space-md);
-  justify-content: space-between;
-  align-items: start;
+  align-items: center;
   border: 1px solid;
+  padding-left: var(--space-md);
 
-  > div:first-of-type {
-    padding: var(--space-sm) var(--space-md);
+  > button:last-of-type {
+    margin-left: auto;
   }
 
   &.variant-info {

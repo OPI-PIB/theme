@@ -1,16 +1,19 @@
-@use "typography/typography";
-@use "typography/headings";
-@use "typography/copy";
+@layer theme {
+  @import "typography/typography";
+  @import "typography/headings";
+  @import "typography/copy";
 
-@use "elements/accordion";
-@use "elements/alert";
-@use "elements/body";
-@use "elements/dialog";
-@use "elements/hr";
-@use "elements/links";
-@use "elements/lists";
-@use "elements/media";
-@use "elements/tables";
+  @import "elements/accordion";
+  @import "elements/alert";
+  @import "elements/body";
+  @import "elements/dialog";
+  @import "elements/hr";
+  @import "elements/icon";
+  @import "elements/link";
+  @import "elements/list";
+  @import "elements/media";
+  @import "elements/table";
 
-@use "forms/buttons";
-@use "forms/fields";
+  @import "forms/buttons";
+  @import "forms/fields";
+}

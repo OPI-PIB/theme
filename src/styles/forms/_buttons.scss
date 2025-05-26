@@ -16,12 +16,9 @@ input[type="submit"] {
     background-color: var(--button-background-hover);
   }
 
-  &:active,
-  &:focus-visible {
-    outline: 2px dashed var(--button-text);
-    outline-offset: -4px;
-    background-color: var(--button-background-hover);
-    border-color: var(--button-background-hover);
+  &:active {
+    background-color: var(--button-background-active);
+    border-color: var(--button-background-active);
   }
 
   &:disabled {
@@ -33,39 +30,25 @@ input[type="submit"] {
     pointer-events: none;
   }
 
-  &.variant-primary {
+  &.variant-primary:not(:disabled) {
     --button-text: var(--text-on-color);
     --button-background: var(--color-primary);
     --button-border: var(--color-primary);
     --button-background-hover: var(--color-primary-hover);
-
-    &:disabled {
-      --button-text: var(--text-disabled);
-      --button-background: var(--background-disabled);
-      --button-border: var(--border-disabled);
-    }
+    --button-background-active: var(--color-primary-active);
   }
 
-  &.variant-secondary {
+  &.variant-secondary:not(:disabled) {
     --button-text: var(--text-on-color);
     --button-background: var(--color-secondary);
     --button-border: var(--color-secondary);
     --button-background-hover: var(--color-secondary-hover);
-
-    &:disabled {
-      --button-text: var(--text-disabled);
-      --button-background: var(--background-disabled);
-      --button-border: var(--border-disabled);
-    }
+    --button-background-active: var(--color-secondary-active);
   }
 
-  &.variant-icon {
+  &.variant-transparent {
     background-color: transparent;
     border-color: transparent;
-
-    > span:first-of-type {
-      font-size: var(--font__size-lg);
-    }
   }
 
   &.size-sm {
@@ -76,5 +59,20 @@ input[type="submit"] {
   &.size-lg {
     font-size: var(--font__size-lg);
     padding: 12px 24px;
+  }
+
+  &.variant-icon {
+    display: inline-flex;
+    padding: 8px;
+
+    &.size-sm {
+      --font-icon__size: 16px;
+      padding: 4px;
+    }
+
+    &.size-lg {
+      --font-icon__size: 24px;
+      padding: 12px;
+    }
   }
 }

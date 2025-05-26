@@ -1,34 +1,34 @@
-:root {
-  --text: light-dark(#000, #fff);
-  --text-on-color: light-dark(#fff, #000);
-  --text-disabled: light-dark(#666, #999);
+// :root {
+//   --text: light-dark(#000, #fff);
+//   --text-on-color: light-dark(#fff, #000);
+//   --text-disabled: light-dark(#666, #999);
 
-  --color-disabled: #ccc;
-  --color-success: light-dark(#016612, #00bd1f);
-  --color-warning: light-dark(#f59a23, #ce821e);
-  --color-error: light-dark(#93000a, #ffb3b8);
-  --color-primary: light-dark(#1e3264, rgb(115, 128, 168));
-  --color-secondary: light-dark(#0f62fe, #4e8afc);
+//   --color-disabled: #ccc;
+//   --color-success: light-dark(#016612, #00bd1f);
+//   --color-warning: light-dark(#f59a23, #ce821e);
+//   --color-error: light-dark(#93000a, #ffb3b8);
+//   --color-primary: light-dark(#1e3264, rgb(115, 128, 168));
+//   --color-secondary: light-dark(#0f62fe, #4e8afc);
 
-  --color__background-body: light-dark(#fff, #000);
-  --color__background-screen: #f1f1f1;
-  --color__background-hr: #ccc;
-  --color__background-button: var(--color__background-body);
-  --color__background-button-hover: #b9d4ff;
-  --color__background-pre: #eee;
-  --color__background-ins: #fff9c0;
+//   --color__background-body: light-dark(#fff, #000);
+//   --color__background-screen: #f1f1f1;
+//   --color__background-hr: #ccc;
+//   --color__background-button: var(--color__background-body);
+//   --color__background-button-hover: #b9d4ff;
+//   --color__background-pre: #eee;
+//   --color__background-ins: #fff9c0;
 
-  --color__text-screen: #21759b;
-  --color__text-input: #666;
-  --color__text-input-focus: #111;
-  --color__link: #4169e1;
-  --color__link-visited: #800080;
-  --color__link-hover: #191970;
-  --color__text-main: var(--color-dark);
+//   --color__text-screen: #21759b;
+//   --color__text-input: #666;
+//   --color__text-input-focus: #111;
+//   --color__link: #4169e1;
+//   --color__link-visited: #800080;
+//   --color__link-hover: #191970;
+//   --color__text-main: var(--color-dark);
 
-  --color__border-button: var(--color-primary);
-  --color__border-button-hover: var(--color__border-button);
-  --color__border-button-focus: var(--color__border-button);
-  --color__border-input: #ccc;
-  --color__border-abbr: #666;
-}
+//   --color__border-button: var(--color-primary);
+//   --color__border-button-hover: var(--color__border-button);
+//   --color__border-button-focus: var(--color__border-button);
+//   --color__border-input: #ccc;
+//   --color__border-abbr: #666;
+// }
