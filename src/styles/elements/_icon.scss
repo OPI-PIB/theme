@@ -1,8 +1,8 @@
 .icon {
-  font-family: var(--font-icon);
+  font-family: var(--icon-font);
   font-weight: normal;
   font-style: normal;
-  font-size: var(--font-icon__size);
+  font-size: var(--icon-font-size);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -12,4 +12,5 @@
   direction: ltr;
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+  transform: scale(1.5);
 }

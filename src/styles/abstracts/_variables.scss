@@ -22,17 +22,6 @@
   --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
   --color-secondary-active: hsl(from var(--color-secondary) h s calc(l - 5));
 
-  --button-text: light-dark(var(--color-primary), #fff);
-  --button-background: var(--background);
-  --button-background-hover: var(--background-hover);
-  --button-background-active: var(--background);
-  --button-border: var(--color-primary);
-  --button-border-active: var(--color-primary);
-
-  --color-link: light-dark(#4169e1, #5f86fc);
-  --color-link-hover: hsl(from var(--color-link) h s calc(l - 10));
-  --color-link-visited: light-dark(#800080, #bb00bb);
-
   --color-info: #cff4fc;
   --color-info-dark: hsl(from var(--color-info) h s calc(l - 60));
   --color-info-border: hsl(from var(--color-info) h s calc(l - 10));
@@ -75,9 +64,23 @@
   --font__weight: 400;
   --font__weight-bold: 700;
 
+  /* buttons */
+  --button-text: light-dark(var(--color-primary), #fff);
+  --button-background: var(--background);
+  --button-background-hover: var(--background-hover);
+  --button-background-active: var(--button-background);
+  --button-border: var(--color-primary);
+  --button-border-active: var(--button-border);
+  --button-font-size: var(--font__size-md);
+
   /* icons */
-  --font-icon: "Material Symbols Outlined";
-  --font-icon__size: 20px;
+  --icon-font: "Material Symbols Outlined";
+  --icon-font-size: var(--button-font-size);
+
+  /* links */
+  --link: light-dark(#4169e1, #5f86fc);
+  --link-hover: hsl(from var(--link) h s calc(l - 10));
+  --link-visited: light-dark(#800080, #bb00bb);
 
   /* shapes */
   --shape: 0.5rem;

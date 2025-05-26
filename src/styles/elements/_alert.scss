@@ -1,7 +1,7 @@
 .alert {
-  --color-link: var(--text);
-  --color-link-hover: var(--text);
-  --color-link-visited: var(--text);
+  --link: var(--text);
+  --link-hover: var(--text);
+  --link-visited: var(--text);
   --text-on-color: var(--text);
 
   display: flex;

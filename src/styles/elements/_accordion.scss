@@ -26,13 +26,12 @@ summary {
   }
 
   &::after {
-    --font-icon__size: var(--font__size-2xl);
-
     content: "arrow_drop_down";
-    font-family: var(--font-icon);
+
+    font-family: var(--icon-font);
     font-weight: normal;
     font-style: normal;
-    font-size: var(--font-icon__size);
+    font-size: var(--font__size-2xl);
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;

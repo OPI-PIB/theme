@@ -24,7 +24,7 @@ import { Component } from "@angular/core";
       <img src="./docs.png" alt="Alt of image" />
     </picture>
   `,
-  styles: `
+  styles: ` 
     .definitions {
       display: flex;
       gap: 15px;
@@ -34,7 +34,7 @@ import { Component } from "@angular/core";
       font-size: var(--font__size-xs);
 
       & > li {
-        background: #eee;
+        background: light-dark(#eee, #333);
         padding: 0 5px;
       }
     }
