@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
       font-size: var(--font__size-xs);
 
       & > li {
-        background: #eee;
+        background: light-dark(#eee, #333);
         padding: 0 5px;
       }
     }

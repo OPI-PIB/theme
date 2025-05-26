@@ -55,6 +55,8 @@ abbr[title] {
 
 mark,
 ins {
+  color: #000;
   background: var(--background-ins);
   text-decoration: none;
+  padding: 0 5px;
 }

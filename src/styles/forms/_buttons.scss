@@ -1,7 +1,5 @@
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input:where([type="button"], [type="reset"], [type="submit"]) {
   color: var(--button-text);
   background: var(--button-background);
   border: 2px solid var(--button-border);
@@ -18,7 +16,7 @@ input[type="submit"] {
 
   &:active {
     background-color: var(--button-background-active);
-    border-color: var(--button-background-active);
+    border-color: var(--button-border-active);
   }
 
   &:disabled {
@@ -31,7 +29,7 @@ input[type="submit"] {
   }
 
   &.variant-primary:not(:disabled) {
-    --button-text: var(--text-on-color);
+    --button-text: #fff;
     --button-background: var(--color-primary);
     --button-border: var(--color-primary);
     --button-background-hover: var(--color-primary-hover);
