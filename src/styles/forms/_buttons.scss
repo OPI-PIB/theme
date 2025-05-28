@@ -1,83 +1,85 @@
-button,
-input:where([type="button"], [type="reset"], [type="submit"]) {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--button-text);
-  background: var(--button-background);
-  border: 2px solid var(--button-border);
-  border-radius: var(--shape);
-  padding: 8px 16px;
-  font-size: var(--button-font-size);
-  font-weight: var(--font__weight-bold);
-  line-height: var(--font__line-height-tight);
-  cursor: pointer;
+@layer theme {
+  button,
+  input:where([type="button"], [type="reset"], [type="submit"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--button-text);
+    background: var(--button-background);
+    border: 2px solid var(--button-border);
+    border-radius: var(--shape);
+    padding: 8px 16px;
+    font-size: var(--button-font-size);
+    font-weight: var(--font__weight-bold);
+    line-height: var(--font__line-height-tight);
+    cursor: pointer;
 
-  &:hover {
-    background-color: var(--button-background-hover);
-  }
+    &:hover {
+      background-color: var(--button-background-hover);
+    }
 
-  &:active {
-    background-color: var(--button-background-active);
-    border-color: var(--button-border-active);
-  }
+    &:active {
+      background-color: var(--button-background-active);
+      border-color: var(--button-border-active);
+    }
 
-  &:disabled {
-    --button-text: var(--text-disabled);
-    --button-background: var(--background-disabled);
-    --button-border: var(--border-disabled);
+    &:disabled {
+      --button-text: var(--text-disabled);
+      --button-background: var(--background-disabled);
+      --button-border: var(--border-disabled);
 
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+      cursor: not-allowed;
+      pointer-events: none;
+    }
 
-  &.variant-primary:not(:disabled) {
-    --button-text: #fff;
-    --button-background: var(--color-primary);
-    --button-border: var(--color-primary);
-    --button-background-hover: var(--color-primary-hover);
-    --button-background-active: var(--color-primary-active);
-    --button-border: var(--button-border);
-  }
+    &.variant-primary:not(:disabled) {
+      --button-text: #fff;
+      --button-background: var(--color-primary);
+      --button-border: var(--color-primary);
+      --button-background-hover: var(--color-primary-hover);
+      --button-background-active: var(--color-primary-active);
+      --button-border: var(--button-border);
+    }
 
-  &.variant-secondary:not(:disabled) {
-    --button-text: var(--text-on-color);
-    --button-background: var(--color-secondary);
-    --button-border: var(--color-secondary);
-    --button-background-hover: var(--color-secondary-hover);
-    --button-background-active: var(--color-secondary-active);
-    --button-border: var(--button-border);
-  }
+    &.variant-secondary:not(:disabled) {
+      --button-text: var(--text-on-color);
+      --button-background: var(--color-secondary);
+      --button-border: var(--color-secondary);
+      --button-background-hover: var(--color-secondary-hover);
+      --button-background-active: var(--color-secondary-active);
+      --button-border: var(--button-border);
+    }
 
-  &.variant-transparent:not(:disabled) {
-    --button-background: hsl(from var(--text) h s l / 0);
-    --button-background-hover: hsl(from var(--text) h s l / 0.1);
-    --button-background-active: hsl(from var(--text) h s l / 0.2);
-    --button-border: transparent;
-  }
-
-  &.size-sm {
-    --button-font-size: var(--font__size-sm);
-    --icon-font-size: var(--font__size-sm);
-    padding: 4px 8px;
-  }
-
-  &.size-lg {
-    --button-font-size: var(--font__size-lg);
-    --icon-font-size: var(--font__size-lg);
-    padding: 12px 24px;
-  }
-
-  &.variant-icon {
-    display: inline-flex;
-    padding: 8px;
+    &.variant-transparent:not(:disabled) {
+      --button-background: hsl(from var(--text) h s l / 0);
+      --button-background-hover: hsl(from var(--text) h s l / 0.1);
+      --button-background-active: hsl(from var(--text) h s l / 0.2);
+      --button-border: transparent;
+    }
 
     &.size-sm {
-      padding: 4px;
+      --button-font-size: var(--font__size-sm);
+      --icon-font-size: var(--font__size-sm);
+      padding: 4px 8px;
     }
 
     &.size-lg {
-      padding: 12px;
+      --button-font-size: var(--font__size-lg);
+      --icon-font-size: var(--font__size-lg);
+      padding: 12px 24px;
+    }
+
+    &.variant-icon {
+      display: inline-flex;
+      padding: 8px;
+
+      &.size-sm {
+        padding: 4px;
+      }
+
+      &.size-lg {
+        padding: 12px;
+      }
     }
   }
 }

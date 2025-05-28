@@ -1,62 +1,64 @@
-p {
-  margin-bottom: var(--space-md);
-}
+@layer theme {
+  p {
+    margin-bottom: var(--space-md);
+  }
 
-dfn,
-cite,
-em,
-i {
-  font-style: italic;
-}
+  dfn,
+  cite,
+  em,
+  i {
+    font-style: italic;
+  }
 
-dfn {
-  border-bottom: 1px dotted var(--border);
-}
+  dfn {
+    border-bottom: 1px dotted var(--border);
+  }
 
-blockquote {
-  margin: 0 var(--space-md);
-}
+  blockquote {
+    margin: 0 var(--space-md);
+  }
 
-address {
-  margin: 0 0 var(--space-md);
-}
+  address {
+    margin: 0 0 var(--space-md);
+  }
 
-pre {
-  background: var(--background-pre);
-  font-family: var(--font-code);
-  line-height: var(--font__line-height-pre);
-  margin-bottom: var(--space-md);
-  max-width: 100%;
-  overflow: auto;
-  padding: var(--space-md);
-}
+  pre {
+    background: var(--background-pre);
+    font-family: var(--font-code);
+    line-height: var(--font__line-height-pre);
+    margin-bottom: var(--space-md);
+    max-width: 100%;
+    overflow: auto;
+    padding: var(--space-md);
+  }
 
-code,
-kbd,
-var {
-  font-family: var(--font-code);
-}
+  code,
+  kbd,
+  var {
+    font-family: var(--font-code);
+  }
 
-kbd {
-  background-color: var(--background-pre);
-  border-radius: 3px;
-  border: 1px solid var(--border-disabled);
-  color: var(--text);
-  display: inline-block;
-  padding: var(--space-xs) var(--space-sm);
-  white-space: nowrap;
-}
+  kbd {
+    background-color: var(--background-pre);
+    border-radius: 3px;
+    border: 1px solid var(--border-disabled);
+    color: var(--text);
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    white-space: nowrap;
+  }
 
-abbr[title] {
-  text-decoration: none;
-  border-bottom: 1px dotted var(--border);
-  cursor: help;
-}
+  abbr[title] {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--border);
+    cursor: help;
+  }
 
-mark,
-ins {
-  color: #000;
-  background: var(--background-ins);
-  text-decoration: none;
-  padding: 0 5px;
+  mark,
+  ins {
+    color: #000;
+    background: var(--background-ins);
+    text-decoration: none;
+    padding: 0 5px;
+  }
 }

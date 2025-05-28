@@ -1,19 +1,17 @@
-@layer theme {
-  @import "typography/typography";
-  @import "typography/headings";
-  @import "typography/copy";
+@use "typography/typography";
+@use "typography/headings";
+@use "typography/copy";
 
-  @import "elements/accordion";
-  @import "elements/alert";
-  @import "elements/body";
-  @import "elements/dialog";
-  @import "elements/hr";
-  @import "elements/icon";
-  @import "elements/link";
-  @import "elements/list";
-  @import "elements/media";
-  @import "elements/table";
+@use "elements/accordion";
+@use "elements/alert";
+@use "elements/body";
+@use "elements/dialog";
+@use "elements/hr";
+@use "elements/icon";
+@use "elements/link";
+@use "elements/list";
+@use "elements/media";
+@use "elements/table";
 
-  @import "forms/buttons";
-  @import "forms/fields";
-}
+@use "forms/buttons";
+@use "forms/fields";

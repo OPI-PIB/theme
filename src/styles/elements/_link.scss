@@ -1,11 +1,13 @@
-a {
-  color: var(--link);
+@layer theme {
+  a {
+    color: var(--link);
 
-  &:visited {
-    color: var(--link-visited);
-  }
+    &:visited {
+      color: var(--link-visited);
+    }
 
-  &:hover {
-    color: var(--link-hover);
+    &:hover {
+      color: var(--link-hover);
+    }
   }
 }

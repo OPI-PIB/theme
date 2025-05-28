@@ -1,19 +1,21 @@
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-  color: var(--text);
-  font-family: var(--font);
-  font-size: var(--font__size-md);
-  line-height: var(--font__line-height-body);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
+@layer theme {
+  body,
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
+    color: var(--text);
+    font-family: var(--font);
+    font-size: var(--font__size-md);
+    line-height: var(--font__line-height-body);
+    font-optical-sizing: auto;
+    font-weight: var(--font__weight);
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
 
-.font-mono {
-  font-family: var(--font-code);
+  .font-mono {
+    font-family: var(--font-code);
+  }
 }

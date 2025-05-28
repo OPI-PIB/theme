@@ -1,99 +1,111 @@
-:root {
-  color-scheme: light dark;
+@layer variables {
+  :root {
+    color-scheme: light dark;
 
-  /* colors */
-  --text: light-dark(#000, #fff);
-  --text-on-color: light-dark(#fff, #000);
-  --background: light-dark(#fff, #000);
-  --background-hover: light-dark(#b9d4ff, #333);
-  --background-pre: light-dark(#eee, #333);
-  --background-ins: #fff9c0;
-  --border: light-dark(#e8e8e8, #333);
+    /* colors */
+    --text: light-dark(#000, #fff);
+    --text-on-color: light-dark(#fff, #000);
+    --background: light-dark(#fff, #000);
+    --background-hover: light-dark(#b9d4ff, #333);
+    --background-pre: light-dark(#eee, #333);
+    --background-ins: #fff9c0;
+    --border: light-dark(#e8e8e8, #333);
 
-  --text-disabled: light-dark(#666, #fff);
-  --border-disabled: #999;
-  --background-disabled: #ccc;
+    --text-disabled: light-dark(#666, #fff);
+    --border-disabled: #999;
+    --background-disabled: #ccc;
 
-  --color-primary: #1e3264;
-  --color-primary-hover: hsl(from var(--color-primary) h s calc(l + 10));
-  --color-primary-active: hsl(from var(--color-primary) h s calc(l - 5));
+    --color-primary: #1e3264;
+    --color-primary-hover: hsl(from var(--color-primary) h s calc(l + 10));
+    --color-primary-active: hsl(from var(--color-primary) h s calc(l - 5));
 
-  --color-secondary: #0f62fe;
-  --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
-  --color-secondary-active: hsl(from var(--color-secondary) h s calc(l - 5));
+    --color-secondary: #0f62fe;
+    --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
+    --color-secondary-active: hsl(from var(--color-secondary) h s calc(l - 5));
 
-  --color-info: #cff4fc;
-  --color-info-dark: hsl(from var(--color-info) h s calc(l - 60));
-  --color-info-border: hsl(from var(--color-info) h s calc(l - 10));
+    --color-info: #cff4fc;
+    --color-info-dark: hsl(from var(--color-info) h s calc(l - 60));
+    --color-info-border: hsl(from var(--color-info) h s calc(l - 10));
 
-  --color-success: #d1e7dd;
-  --color-success-dark: hsl(from var(--color-success) h s calc(l - 60));
-  --color-success-border: hsl(from var(--color-success) h s calc(l - 10));
+    --color-success: #d1e7dd;
+    --color-success-dark: hsl(from var(--color-success) h s calc(l - 60));
+    --color-success-border: hsl(from var(--color-success) h s calc(l - 10));
 
-  --color-warning: #fff3cd;
-  --color-warning-dark: hsl(from var(--color-warning) h s calc(l - 60));
-  --color-warning-border: hsl(from var(--color-warning) h s calc(l - 10));
+    --color-warning: #fff3cd;
+    --color-warning-dark: hsl(from var(--color-warning) h s calc(l - 60));
+    --color-warning-border: hsl(from var(--color-warning) h s calc(l - 10));
 
-  --color-danger: #f8d7da;
-  --color-danger-dark: hsl(from var(--color-danger) h s calc(l - 60));
-  --color-danger-border: hsl(from var(--color-danger) h s calc(l - 10));
+    --color-danger: #da1e28;
+    --color-danger-background: light-dark(
+      hsl(from var(--color-danger) h s calc(l + 45)),
+      hsl(from var(--color-danger) h s calc(l - 10))
+    );
+    --color-danger-border: light-dark(
+      var(--color-danger),
+      hsl(from var(--color-danger) h s calc(l + 20))
+    );
 
-  --color-outline: light-dark(#000, #fff);
+    --color-outline: light-dark(#000, #fff);
 
-  /* typography */
-  --font: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-code: "Roboto Mono", monaco, consolas, "Andale Mono",
-    "DejaVu Sans Mono", monospace;
+    /* typography */
+    --font: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --font-code: "Roboto Mono", monaco, consolas, "Andale Mono",
+      "DejaVu Sans Mono", monospace;
 
-  --font__line-height-tight: 1.15;
-  --font__line-height-body: 1.5;
-  --font__line-height-pre: 1.6;
+    --font__line-height-tight: 1.15;
+    --font__line-height-body: 1.5;
+    --font__line-height-pre: 1.6;
 
-  --font__size-xs: 0.75rem; /* 12 px – np. metadane, caption */
-  --font__size-sm: 0.875rem; /* 14 px – tekst pomocniczy */
-  --font__size-md: 1rem; /* 16 px – kopia podstawowa */
-  --font__size-lg: 1.125rem; /* 18 px – lead, większe przyciski */
-  --font__size-xl: 1.25rem; /* 20 px – minor heading */
-  --font__size-2xl: 1.5rem; /* 24 px – h4-h5, hero subheading */
-  --font__size-3xl: 1.75rem; /* h3 */
-  --font__size-4xl: 2.1rem; /* h2 */
-  --font__size-5xl: 2.5rem; /* h1 / hero */
+    --font__size-xs: 0.75rem; /* 12 px – np. metadane, caption */
+    --font__size-sm: 0.875rem; /* 14 px – tekst pomocniczy */
+    --font__size-md: 1rem; /* 16 px – podstawowy */
+    --font__size-lg: 1.125rem; /* 18 px – lead, większe przyciski */
+    --font__size-xl: 1.25rem; /* 20 px – minor heading */
+    --font__size-2xl: 1.5rem; /* 24 px – h4-h5, hero subheading */
+    --font__size-3xl: 1.75rem; /* h3 */
+    --font__size-4xl: 2.1rem; /* h2 */
+    --font__size-5xl: 2.5rem; /* h1 / hero */
 
-  --font__weight-light: 300;
-  --font__weight: 400;
-  --font__weight-bold: 700;
+    --font__weight-light: 300;
+    --font__weight: 400;
+    --font__weight-bold: 700;
 
-  /* buttons */
-  --button-text: light-dark(var(--color-primary), #fff);
-  --button-background: var(--background);
-  --button-background-hover: var(--background-hover);
-  --button-background-active: var(--button-background);
-  --button-border: var(--color-primary);
-  --button-border-active: var(--button-border);
-  --button-font-size: var(--font__size-md);
+    /* buttons */
+    --button-text: light-dark(var(--color-primary), #fff);
+    --button-background: var(--background);
+    --button-background-hover: var(--background-hover);
+    --button-background-active: var(--button-background);
+    --button-border: var(--color-primary);
+    --button-border-active: var(--button-border);
+    --button-font-size: var(--font__size-md);
 
-  /* icons */
-  --icon-font: "Material Symbols Outlined";
-  --icon-font-size: var(--button-font-size);
+    /* icons */
+    --icon-font: "Material Symbols Outlined";
+    --icon-font-size: var(--button-font-size);
 
-  /* links */
-  --link: light-dark(#4169e1, #5f86fc);
-  --link-hover: hsl(from var(--link) h s calc(l - 10));
-  --link-visited: light-dark(#800080, #bb00bb);
+    /* links */
+    --link: light-dark(#4169e1, #5f86fc);
+    --link-hover: hsl(from var(--link) h s calc(l - 10));
+    --link-visited: light-dark(#800080, #bb00bb);
 
-  /* shapes */
-  --shape: 0.5rem;
+    /* inputs */
+    --input-background: light-dark(#f4f4f4, #333);
+    --input-border: #8d8d8d;
 
-  /* spacing */
-  --space-xs: 0.25rem; /* 4 px */
-  --space-sm: 0.5rem; /* 8 px */
-  --space-md: 1rem; /* 16 px */
-  --space-lg: 1.5rem; /* 24 px */
-  --space-xl: 2rem; /* 32 px */
-  --space-2xl: 3rem; /* 48 px */
-  --space-3xl: 4rem; /* 64 px */
+    /* shapes */
+    --shape: 0.5rem;
 
-  --min-dialog-width: 300px;
-  --max-dialog-width: min(500px, 90vw);
+    /* spacing */
+    --space-xs: 0.25rem; /* 4 px */
+    --space-sm: 0.5rem; /* 8 px */
+    --space-md: 1rem; /* 16 px */
+    --space-lg: 1.5rem; /* 24 px */
+    --space-xl: 2rem; /* 32 px */
+    --space-2xl: 3rem; /* 48 px */
+    --space-3xl: 4rem; /* 64 px */
+
+    --min-dialog-width: 300px;
+    --max-dialog-width: min(500px, 90vw);
+  }
 }

@@ -1,4 +1,2 @@
-@layer normalize {
-  @import "generic/normalize";
-  @import "generic/box-sizing";
-}
+@use "generic/normalize";
+@use "generic/box-sizing";

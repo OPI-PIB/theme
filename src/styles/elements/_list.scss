@@ -1,26 +1,28 @@
-ul,
-ol {
-  margin: 0 0 15px 30px;
-}
+@layer theme {
+  ul,
+  ol {
+    margin: 0 0 15px 30px;
+  }
 
-ul {
-  list-style: disc;
-}
+  ul {
+    list-style: disc;
+  }
 
-ol {
-  list-style: decimal;
-}
+  ol {
+    list-style: decimal;
+  }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 15px;
-}
+  li > ul,
+  li > ol {
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
 
-dt {
-  font-weight: 700;
-}
+  dt {
+    font-weight: 700;
+  }
 
-dd {
-  margin: 0 15px 15px;
+  dd {
+    margin: 0 15px 15px;
+  }
 }

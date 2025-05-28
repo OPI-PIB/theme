@@ -1,36 +1,54 @@
-input:where(
-    [type="text"],
-    [type="email"],
-    [type="url"],
-    [type="password"],
-    [type="search"],
-    [type="number"],
-    [type="tel"],
-    [type="range"],
-    [type="date"],
-    [type="month"],
-    [type="week"],
-    [type="time"],
-    [type="datetime"],
-    [type="datetime-local"],
-    [type="color"]
-  ),
-textarea {
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: var(--shape);
-}
+@layer theme {
+  input:where(
+      [type="text"],
+      [type="email"],
+      [type="url"],
+      [type="password"],
+      [type="search"],
+      [type="number"],
+      [type="tel"],
+      [type="range"],
+      [type="date"],
+      [type="month"],
+      [type="week"],
+      [type="time"],
+      [type="datetime"],
+      [type="datetime-local"],
+      [type="color"]
+    ),
+  textarea,
+  select {
+    color: var(--text);
+    padding: 8px 16px;
+    background-color: var(--input-background);
+    border: 0 none;
+    border-bottom: 1px solid var(--input-border);
+    border-radius: var(--shape);
 
-select {
-  border: 1px solid var(--border);
-}
+    &:not(:valid) {
+      border: 1px solid var(--color-danger-border);
 
-textarea {
-  width: 100%;
-  border: 1px solid var(--border);
-}
+      + .error {
+        font-size: var(--font__size-sm);
+        color: var(--color-danger-border);
+        margin-top: 5px;
+        display: block;
+      }
+    }
+  }
 
-label:has(+ input, + textarea, + select) {
-  display: block;
-  width: max-content;
+  .error {
+    display: none;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  label:has(+ input, + textarea, + select) {
+    font-size: var(--font__size-sm);
+    display: block;
+    width: max-content;
+    margin-bottom: 5px;
+  }
 }

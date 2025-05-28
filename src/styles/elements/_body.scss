@@ -1,8 +1,10 @@
-body {
-  background: var(--background);
-}
+@layer theme {
+  body {
+    background: var(--background);
+  }
 
-*:focus-visible {
-  outline: 2px solid var(--color-outline);
-  outline-offset: 2px;
+  *:focus-visible {
+    outline: 2px solid var(--color-outline);
+    outline-offset: 2px;
+  }
 }

@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "storybook": "ng run angular-latest:storybook",
-    "build-storybook": "ng run angular-latest:build-storybook"
+    "build-storybook": "ng run angular-latest:build-storybook",
+    "build:scss": "sass src/styles:dist/styles --no-source-map --style=compressed"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,7 @@
     "@angular-devkit/build-angular": "^19.2.11",
     "@angular/cli": "^19.2.11",
     "@angular/compiler-cli": "^19.2.0",
-    "@storybook/addon-a11y": "^8.6.14", 
+    "@storybook/addon-a11y": "^8.6.14",
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-interactions": "^8.6.14",
     "@storybook/angular": "^8.6.14",

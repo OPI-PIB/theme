@@ -1,29 +1,31 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-  margin: var(--space-md) 0;
-}
+@layer theme {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    clear: both;
+    margin: var(--space-md) 0;
+  }
 
-h1 {
-  font-size: var(--font__size-5xl);
-}
+  h1 {
+    font-size: var(--font__size-5xl);
+  }
 
-h2 {
-  font-size: var(--font__size-4xl);
-}
+  h2 {
+    font-size: var(--font__size-4xl);
+  }
 
-h3 {
-  font-size: var(--font__size-3xl);
-}
+  h3 {
+    font-size: var(--font__size-3xl);
+  }
 
-h4 {
-  font-size: var(--font__size-2xl);
-}
+  h4 {
+    font-size: var(--font__size-2xl);
+  }
 
-h5 {
-  font-size: var(--font__size-2xl);
+  h5 {
+    font-size: var(--font__size-2xl);
+  }
 }

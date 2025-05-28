@@ -1,6 +1,8 @@
-hr {
-  background-color: var(--border);
-  border: 0;
-  height: 1px;
-  margin-bottom: 16px;
+@layer theme {
+  hr {
+    background-color: var(--border);
+    border: 0;
+    height: 1px;
+    margin-bottom: 16px;
+  }
 }

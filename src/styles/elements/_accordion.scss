@@ -1,57 +1,60 @@
-details {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  width: 100%;
-  padding: 8px 16px;
+@layer theme {
+  details {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    padding: 8px 16px;
 
-  + details {
-    border-top: 0 none;
+    + details {
+      border-top: 0 none;
+    }
   }
-}
-
-summary {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 8px 16px;
-  margin: -8px -16px;
-
-  &:hover {
-    background-color: var(--border);
-  }
-
-  &::marker {
-    display: none;
-  }
-
-  &::after {
-    content: "arrow_drop_down";
-
-    font-family: var(--icon-font);
-    font-weight: normal;
-    font-style: normal;
-    font-size: var(--font__size-2xl);
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: "liga";
-    -webkit-font-smoothing: antialiased;
-  }
-}
-
-details[open] {
-  background-color: var(--background);
 
   summary {
-    margin-bottom: var(--space-sm);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 8px 16px;
+    margin: -8px -16px;
+
+    &:hover {
+      background-color: var(--border);
+    }
+
+    &::marker {
+      display: none;
+    }
 
     &::after {
-      content: "arrow_drop_up";
+      content: "keyboard_arrow_down";
+
+      font-family: var(--icon-font);
+      font-weight: normal;
+      font-style: normal;
+      font-size: var(--font__size-2xl);
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  details[open] {
+    background-color: var(--background);
+    padding-bottom: 24px;
+
+    summary {
+      margin-bottom: var(--space-sm);
+
+      &::after {
+        content: "keyboard_arrow_up";
+      }
     }
   }
 }

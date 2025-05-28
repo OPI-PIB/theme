@@ -1,20 +1,22 @@
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
+@layer theme {
+  embed,
+  iframe,
+  object {
+    max-width: 100%;
+  }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 
-figure {
-  margin: 0;
+  figure {
+    margin: 0;
 
-  figcaption {
-    font-size: var(--font__size-sm);
-    font-style: italic;
-    text-align: center;
+    figcaption {
+      font-size: var(--font__size-sm);
+      font-style: italic;
+      text-align: center;
+    }
   }
 }
