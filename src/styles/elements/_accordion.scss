@@ -17,9 +17,10 @@
     gap: 15px;
     padding: 8px 16px;
     margin: -8px -16px;
+    background-color: var(--background);
 
     &:hover {
-      background-color: var(--border);
+      --background: var(--input-background);
     }
 
     &::marker {
@@ -51,6 +52,7 @@
 
     summary {
       margin-bottom: var(--space-sm);
+      --background: var(--input-background);
 
       &::after {
         content: "keyboard_arrow_up";

@@ -84,8 +84,12 @@
 
     /* inputs */
     --input-min-height: 40px;
-    --input-background: light-dark(#f4f4f4, #333);
+    --input-background: hsl(from var(--border) h s calc(l + 5));
     --input-border: #8d8d8d;
+
+    /* tables */
+    --table-border: var(--border);
+    --table-background: var(--input-background);
 
     /* dialogs */
     --dialog-min-width: 300px;

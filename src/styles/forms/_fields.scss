@@ -27,10 +27,11 @@
 
     &:not(:valid) {
       border: 1px solid var(--color-danger-border);
+      background-color: var(--color-danger-bg);
 
       + .error {
         font-size: var(--font__size-sm);
-        color: var(--color-danger-border);
+        color: var(--color-danger);
         margin-top: 5px;
         display: block;
       }
