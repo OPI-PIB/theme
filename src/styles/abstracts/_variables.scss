@@ -23,27 +23,21 @@
     --color-secondary-hover: hsl(from var(--color-secondary) h s calc(l + 10));
     --color-secondary-active: hsl(from var(--color-secondary) h s calc(l - 5));
 
-    --color-info: #cff4fc;
-    --color-info-dark: hsl(from var(--color-info) h s calc(l - 60));
-    --color-info-border: hsl(from var(--color-info) h s calc(l - 10));
+    --color-info: light-dark(#055160, #cff4fc);
+    --color-info-bg: light-dark(#cff4fc, #055160);
+    --color-info-border: #9eeaf9;
 
-    --color-success: #d1e7dd;
-    --color-success-dark: hsl(from var(--color-success) h s calc(l - 60));
-    --color-success-border: hsl(from var(--color-success) h s calc(l - 10));
+    --color-success: light-dark(#0a3622, #d1e7dd);
+    --color-success-bg: light-dark(#d1e7dd, #0a3622);
+    --color-success-border: #a3cfbb;
 
-    --color-warning: #fff3cd;
-    --color-warning-dark: hsl(from var(--color-warning) h s calc(l - 60));
-    --color-warning-border: hsl(from var(--color-warning) h s calc(l - 10));
+    --color-warning: light-dark(#664d03, #fff3cd);
+    --color-warning-bg: light-dark(#fff3cd, #664d03);
+    --color-warning-border: #ffe69c;
 
-    --color-danger: #da1e28;
-    --color-danger-background: light-dark(
-      hsl(from var(--color-danger) h s calc(l + 45)),
-      hsl(from var(--color-danger) h s calc(l - 10))
-    );
-    --color-danger-border: light-dark(
-      var(--color-danger),
-      hsl(from var(--color-danger) h s calc(l + 20))
-    );
+    --color-danger: light-dark(#58151c, #f8d7da);
+    --color-danger-bg: light-dark(#f8d7da, #58151c);
+    --color-danger-border: #f1aeb5;
 
     --color-outline: light-dark(#000, #fff);
 
@@ -90,11 +84,16 @@
     --link-visited: light-dark(#800080, #bb00bb);
 
     /* inputs */
+    --input-min-height: 40px;
     --input-background: light-dark(#f4f4f4, #333);
     --input-border: #8d8d8d;
 
+    /* dialogs */
+    --dialog-min-width: 300px;
+    --dialog-max-width: min(500px, 90vw);
+
     /* shapes */
-    --shape: 0.5rem;
+    --border-radius: 0;
 
     /* spacing */
     --space-xs: 0.25rem; /* 4 px */
@@ -104,8 +103,5 @@
     --space-xl: 2rem; /* 32 px */
     --space-2xl: 3rem; /* 48 px */
     --space-3xl: 4rem; /* 64 px */
-
-    --min-dialog-width: 300px;
-    --max-dialog-width: min(500px, 90vw);
   }
 }

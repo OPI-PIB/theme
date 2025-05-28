@@ -8,6 +8,8 @@ const meta: Meta<ButtonComponent> = {
   argTypes: {},
   args: {
     disabled: false,
+    iconsBefore: false,
+    iconsAfter: false,
   },
 };
 
