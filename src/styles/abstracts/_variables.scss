@@ -6,9 +6,8 @@
     --text: light-dark(#000, #fff);
     --text-on-color: light-dark(#fff, #000);
     --background: light-dark(#fff, #000);
-    --background-hover: light-dark(#b9d4ff, #333);
     --background-pre: light-dark(#eee, #333);
-    --background-ins: #fff9c0;
+    --background-ins: light-dark(#fff9c0ee, #817400);
     --border: light-dark(#e8e8e8, #333);
 
     --text-disabled: light-dark(#666, #fff);
@@ -68,7 +67,7 @@
     /* buttons */
     --button-text: light-dark(var(--color-primary), #fff);
     --button-background: var(--background);
-    --button-background-hover: var(--background-hover);
+    --button-background-hover: light-dark(#b9d4ff, #333);
     --button-background-active: var(--button-background);
     --button-border: var(--color-primary);
     --button-border-active: var(--button-border);

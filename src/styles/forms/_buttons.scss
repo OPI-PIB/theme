@@ -5,8 +5,10 @@
     align-items: center;
     gap: 8px;
     color: var(--button-text);
-    background: var(--button-background);
-    border: 2px solid var(--button-border);
+    background-color: var(--button-background);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--button-border);
     border-radius: var(--border-radius);
     padding: 8px 16px;
     font-size: var(--button-font-size);
@@ -37,7 +39,6 @@
       --button-border: var(--color-primary);
       --button-background-hover: var(--color-primary-hover);
       --button-background-active: var(--color-primary-active);
-      --button-border: var(--button-border);
     }
 
     &.variant-secondary:not(:disabled) {
@@ -46,7 +47,6 @@
       --button-border: var(--color-secondary);
       --button-background-hover: var(--color-secondary-hover);
       --button-background-active: var(--color-secondary-active);
-      --button-border: var(--button-border);
     }
 
     &.variant-transparent:not(:disabled) {

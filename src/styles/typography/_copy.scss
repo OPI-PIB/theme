@@ -56,7 +56,7 @@
 
   mark,
   ins {
-    color: #000;
+    color: var(--text);
     background: var(--background-ins);
     text-decoration: none;
     padding: 0 5px;
