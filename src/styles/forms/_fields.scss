@@ -19,15 +19,41 @@
   textarea,
   select {
     color: var(--text);
-    padding: 8px 16px;
     background-color: var(--input-background);
     border: 0 none;
     border-bottom: 1px solid var(--input-border);
     border-radius: var(--border-radius);
+    padding: 8px 16px;
+    width: 100%;
+
+    &::placeholder {
+      color: hsl(from var(--text) h s l / 0.5);
+    }
+
+    &:not([type="range"], textarea) {
+      height: 40px;
+    }
+
+    &:where([type="range"]) {
+      padding: 0;
+    }
+
+    &:where([type="color"]) {
+      padding: 4px;
+      width: var(--button-size);
+    }
+
+    + .error {
+      display: none;
+    }
 
     &:not(:valid) {
       border: 1px solid var(--color-danger-border);
       background-color: var(--color-danger-bg);
+
+      &::placeholder {
+        color: hsl(from var(--color-danger) h s l / 0.7);
+      }
 
       + .error {
         font-size: var(--font__size-sm);
@@ -38,15 +64,12 @@
     }
   }
 
-  .error {
-    display: none;
-  }
-
   textarea {
     width: 100%;
+    vertical-align: top;
   }
 
-  label:has(+ input, + textarea, + select) {
+  label:has(+ input, + textarea, + select, + progress, + meter) {
     font-size: var(--font__size-sm);
     display: block;
     width: max-content;

@@ -3,6 +3,7 @@
   input:where([type="button"], [type="reset"], [type="submit"]) {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     color: var(--button-text);
     background-color: var(--button-background);
@@ -11,6 +12,7 @@
     border-color: var(--button-border);
     border-radius: var(--border-radius);
     padding: 8px 16px;
+    height: var(--button-size);
     font-size: var(--button-font-size);
     font-weight: var(--font__weight-bold);
     line-height: var(--font__line-height-tight);
@@ -42,7 +44,7 @@
     }
 
     &.variant-secondary:not(:disabled) {
-      --button-text: var(--text-on-color);
+      --button-text: #fff;
       --button-background: var(--color-secondary);
       --button-border: var(--color-secondary);
       --button-background-hover: var(--color-secondary-hover);
@@ -55,30 +57,33 @@
       --button-background-active: hsl(from var(--text) h s l / 0.2);
       --button-border: transparent;
     }
+  }
+
+  .size-sm {
+    --button-font-size: var(--font__size-sm);
+    --icon-font-size: var(--font__size-sm);
+    padding: 4px 8px;
+    --button-size: 30px;
+  }
+
+  .size-lg {
+    --button-font-size: var(--font__size-lg);
+    --icon-font-size: var(--font__size-lg);
+    padding: 12px 24px;
+    --button-size: 50px;
+  }
+
+  .variant-icon {
+    display: inline-flex;
+    padding: 8px;
+    width: var(--button-size);
 
     &.size-sm {
-      --button-font-size: var(--font__size-sm);
-      --icon-font-size: var(--font__size-sm);
-      padding: 4px 8px;
+      padding: 4px;
     }
 
     &.size-lg {
-      --button-font-size: var(--font__size-lg);
-      --icon-font-size: var(--font__size-lg);
-      padding: 12px 24px;
-    }
-
-    &.variant-icon {
-      display: inline-flex;
-      padding: 8px;
-
-      &.size-sm {
-        padding: 4px;
-      }
-
-      &.size-lg {
-        padding: 12px;
-      }
+      padding: 12px;
     }
   }
 }

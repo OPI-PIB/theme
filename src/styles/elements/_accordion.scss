@@ -1,8 +1,9 @@
+@use "icon";
+
 @layer theme {
   details {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    width: 100%;
     padding: 8px 16px;
 
     + details {
@@ -28,29 +29,17 @@
     }
 
     &::after {
+      @include icon.icon-base;
       content: "keyboard_arrow_down";
-
-      font-family: var(--icon-font);
-      font-weight: normal;
-      font-style: normal;
-      font-size: var(--font__size-2xl);
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      -webkit-font-feature-settings: "liga";
-      -webkit-font-smoothing: antialiased;
+      --icon-font-size: var(--font__size-2xl);
     }
   }
 
-  details[open] {
+  details:is([open]) {
     background-color: var(--background);
     padding-bottom: 24px;
 
-    summary {
+    > summary {
       margin-bottom: var(--space-sm);
       --background: var(--input-background);
 

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
   selector: "app-meter",
@@ -13,11 +13,13 @@ import { Component } from "@angular/core";
       low="33"
       high="66"
       optimum="80"
-      value="50"
+      [value]="value()"
     >
-      at 50/100
+      at {{ value() }}/100
     </meter>
   `,
   styles: ``,
 })
-export class MeterComponent {}
+export class MeterComponent {
+  value = input.required<number>();
+}

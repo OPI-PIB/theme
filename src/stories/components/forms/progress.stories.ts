@@ -6,7 +6,12 @@ import { ProgressComponent } from "./progress.component";
 const meta: Meta<ProgressComponent> = {
   title: "Forms",
   component: ProgressComponent,
-  argTypes: {},
+  argTypes: {
+    value: { control: "range" },
+  },
+  args: {
+    value: 70,
+  },
 };
 
 export default meta;

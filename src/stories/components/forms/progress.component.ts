@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
   selector: "app-progress",
@@ -6,8 +6,10 @@ import { Component } from "@angular/core";
   template: `
     <label for="file">File progress:</label>
 
-    <progress id="file" max="100" value="70">70%</progress>
+    <progress id="file" max="100" [value]="value()">{{ value() }}%</progress>
   `,
   styles: ``,
 })
-export class ProgressComponent {}
+export class ProgressComponent {
+  value = input.required<number>();
+}

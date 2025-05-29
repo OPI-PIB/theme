@@ -13,8 +13,16 @@ import { Component, input, OnDestroy, OnInit } from "@angular/core";
       {{ content() }} 2
     </details>
     <details>
-      <summary>{{ label() }} 3</summary>
-      {{ content() }} 3
+      <summary>{{ label() }} 3 with nested</summary>
+
+      <details>
+        <summary>nested {{ label() }} 1</summary>
+        nested {{ content() }} 1
+      </details>
+      <details>
+        <summary>nested {{ label() }} 2</summary>
+        nested {{ content() }} 2
+      </details>
     </details>
   `,
   styles: ``,
@@ -36,13 +44,18 @@ export class AccordionComponent implements OnInit, OnDestroy {
 
     allDetails.forEach((detail) => {
       const handler = () => {
-        if (detail.open) {
-          allDetails.forEach((d) => {
-            if (d !== detail) {
-              d.removeAttribute("open");
-            }
-          });
-        }
+        if (!detail.open) return;
+
+        const parent = detail.parentElement;
+        const siblings: HTMLDetailsElement[] = parent
+          ? Array.from(parent.querySelectorAll(":scope > details"))
+          : allDetails;
+
+        siblings.forEach((d) => {
+          if (d !== detail) {
+            d.open = false;
+          }
+        });
       };
 
       detail.addEventListener("toggle", handler);

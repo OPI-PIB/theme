@@ -6,7 +6,12 @@ import { MeterComponent } from "./meter.component";
 const meta: Meta<MeterComponent> = {
   title: "Forms",
   component: MeterComponent,
-  argTypes: {},
+  argTypes: {
+    value: { control: "range" },
+  },
+  args: {
+    value: 70,
+  },
 };
 
 export default meta;
