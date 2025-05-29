@@ -2,20 +2,21 @@
   button,
   input:where([type="button"], [type="reset"], [type="submit"]) {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--button-text);
-    background-color: var(--button-background);
     border-width: 2px;
     border-style: solid;
     border-color: var(--button-border);
     border-radius: var(--border-radius);
-    padding: 8px 16px;
-    height: var(--button-size);
+    background-color: var(--button-background);
+    color: var(--button-text);
     font-size: var(--button-font-size);
     font-weight: var(--font__weight-bold);
     line-height: var(--font__line-height-tight);
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    height: var(--button-size);
+    white-space: nowrap;
     cursor: pointer;
 
     &:hover {
@@ -33,6 +34,20 @@
 
       cursor: not-allowed;
       pointer-events: none;
+    }
+
+    &.size-sm {
+      --button-font-size: var(--font__size-sm);
+      --icon-font-size: var(--font__size-sm);
+      --button-size: 30px;
+      padding: 4px 8px;
+    }
+
+    &.size-lg {
+      --button-font-size: var(--font__size-lg);
+      --icon-font-size: var(--font__size-lg);
+      --button-size: 50px;
+      padding: 12px 24px;
     }
 
     &.variant-primary:not(:disabled) {
@@ -57,33 +72,19 @@
       --button-background-active: hsl(from var(--text) h s l / 0.2);
       --button-border: transparent;
     }
-  }
 
-  .size-sm {
-    --button-font-size: var(--font__size-sm);
-    --icon-font-size: var(--font__size-sm);
-    padding: 4px 8px;
-    --button-size: 30px;
-  }
+    &.variant-icon {
+      display: inline-flex;
+      padding: 8px;
+      width: var(--button-size);
 
-  .size-lg {
-    --button-font-size: var(--font__size-lg);
-    --icon-font-size: var(--font__size-lg);
-    padding: 12px 24px;
-    --button-size: 50px;
-  }
+      &.size-sm {
+        padding: 4px;
+      }
 
-  .variant-icon {
-    display: inline-flex;
-    padding: 8px;
-    width: var(--button-size);
-
-    &.size-sm {
-      padding: 4px;
-    }
-
-    &.size-lg {
-      padding: 12px;
+      &.size-lg {
+        padding: 12px;
+      }
     }
   }
 }

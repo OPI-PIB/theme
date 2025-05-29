@@ -1,20 +1,10 @@
 @layer theme {
-  input:where(
-      [type="text"],
-      [type="email"],
-      [type="url"],
-      [type="password"],
-      [type="search"],
-      [type="number"],
-      [type="tel"],
-      [type="range"],
-      [type="date"],
-      [type="month"],
-      [type="week"],
-      [type="time"],
-      [type="datetime"],
-      [type="datetime-local"],
-      [type="color"]
+  input:not(
+      [type="button"],
+      [type="reset"],
+      [type="submit"],
+      [type="checkbox"],
+      [type="radio"]
     ),
   textarea,
   select {

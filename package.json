@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "storybook": "ng run angular-latest:storybook",
     "build-storybook": "ng run angular-latest:build-storybook",
-    "build:scss": "sass src/styles:dist/styles --no-source-map --style=compressed"
+    "build:scss": "sass src/styles:dist/styles --no-source-map --style=compressed",
+    "postcss": "postcss dist/styles/*.css --dir dist/styles",
+    "build:css": "npm run build:scss && npm run postcss"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,8 @@
     "@storybook/angular": "^8.6.14",
     "@storybook/blocks": "^8.6.14",
     "@storybook/test": "^8.6.14",
+    "autoprefixer": "^10.4.21",
+    "postcss-cli": "^11.0.1",
     "storybook": "^8.6.14",
     "typescript": "~5.7.2"
   }
