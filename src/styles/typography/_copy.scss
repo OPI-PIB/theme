@@ -1,6 +1,6 @@
 @layer theme {
   p {
-    margin-bottom: var(--space-md);
+    margin-bottom: 16px;
   }
 
   dfn,
@@ -15,21 +15,21 @@
   }
 
   blockquote {
-    margin: 0 var(--space-md);
+    margin: 0 16px;
   }
 
   address {
-    margin: 0 0 var(--space-md);
+    margin: 0 0 16px;
   }
 
   pre {
     background: var(--background-pre);
     font-family: var(--font-code);
     line-height: var(--font__line-height-pre);
-    margin-bottom: var(--space-md);
+    margin-bottom: 16px;
     max-width: 100%;
     overflow: auto;
-    padding: var(--space-md);
+    padding: 16px;
   }
 
   code,
@@ -44,7 +44,7 @@
     border: 1px solid var(--border-disabled);
     color: var(--text);
     display: inline-block;
-    padding: var(--space-xs) var(--space-sm);
+    padding: 4px 8px;
     white-space: nowrap;
   }
 

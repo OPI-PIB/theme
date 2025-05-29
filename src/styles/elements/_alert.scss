@@ -5,11 +5,11 @@
     --link-visited: var(--text);
 
     display: flex;
-    gap: var(--space-md);
+    gap: 16px;
     align-items: center;
     border: 1px solid;
     color: var(--text);
-    padding-left: var(--space-md);
+    padding-left: 16px;
     background-color: var(--background);
     border-color: var(--border);
     border-radius: var(--border-radius);
