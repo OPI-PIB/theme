@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
   selector: "app-select",
@@ -6,8 +6,8 @@ import { Component } from "@angular/core";
   template: `
     <div style="margin-bottom: 15px;">
       <label for="selectId">Select</label>
-      <select id="selectId">
-        <option value="">Select</option>
+      <select id="selectId" [disabled]="disabled()">
+        <option value="">---</option>
         <option value="option1">Option 1</option>
         <optgroup label="Sauropods">
           <option>Diplodocus</option>
@@ -20,8 +20,8 @@ import { Component } from "@angular/core";
     </div>
     <div>
       <label for="selectRequiredId">Select required</label>
-      <select id="selectRequiredId" required>
-        <option value="">Select</option>
+      <select id="selectRequiredId" [disabled]="disabled()" required>
+        <option value="">---</option>
         <option value="option1">Option 1</option>
       </select>
       <div class="error">Value required</div>
@@ -29,4 +29,6 @@ import { Component } from "@angular/core";
   `,
   styles: ``,
 })
-export class SelectComponent {}
+export class SelectComponent {
+  disabled = input.required<boolean>();
+}

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -7,7 +7,11 @@ import { FormsModule } from "@angular/forms";
   template: `
     <div style="margin-bottom: 15px;">
       <label for="textareaId">Textarea</label>
-      <textarea id="textareaId" placeholder="placeholder"></textarea>
+      <textarea
+        id="textareaId"
+        placeholder="placeholder"
+        [disabled]="disabled()"
+      ></textarea>
     </div>
     <div class="field">
       <label for="textareaRequiedId">Textarea</label>
@@ -16,6 +20,7 @@ import { FormsModule } from "@angular/forms";
         placeholder="placeholder"
         required
         minlength="3"
+        [disabled]="disabled()"
         [(ngModel)]="text"
       ></textarea>
       <div class="error">Value to short</div>
@@ -38,5 +43,7 @@ import { FormsModule } from "@angular/forms";
   `,
 })
 export class TextareaComponent {
+  disabled = input.required<boolean>();
+
   protected text = "";
 }

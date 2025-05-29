@@ -8,9 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "storybook": "ng run angular-latest:storybook",
     "build-storybook": "ng run angular-latest:build-storybook",
-    "build:scss": "sass src/styles:dist/styles --no-source-map --style=compressed",
-    "postcss": "postcss dist/styles/*.css --dir dist/styles",
-    "build:css": "npm run build:scss && npm run postcss"
+    "_build:scss": "sass src/styles:dist/styles --no-source-map --style=compressed",
+    "_postcss": "postcss dist/styles/*.css --dir dist/styles",
+    "build:css": "npm run _build:scss && npm run _postcss"
   },
   "private": true,
   "dependencies": {

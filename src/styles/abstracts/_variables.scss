@@ -10,7 +10,7 @@
     --background-ins: light-dark(#fff9c0ee, #817400);
     --border: light-dark(#e8e8e8, #333);
 
-    --text-disabled: light-dark(#666, #fff);
+    --text-disabled: #666;
     --border-disabled: #999;
     --background-disabled: #ccc;
 
@@ -85,8 +85,12 @@
 
     /* inputs */
     --input-min-height: 40px;
+    --input-text: var(--text);
     --input-background: hsl(from var(--border) h s calc(l + 5));
     --input-border: #8d8d8d;
+
+    /* checkbox */
+    --checkbox-size: 16px;
 
     /* tables */
     --table-border: var(--border);

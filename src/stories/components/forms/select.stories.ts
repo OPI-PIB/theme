@@ -14,5 +14,7 @@ type Story = StoryObj<SelectComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Select: Story = {
-  args: {},
+  args: {
+    disabled: false,
+  },
 };

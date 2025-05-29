@@ -14,5 +14,7 @@ type Story = StoryObj<InputComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Input: Story = {
-  args: {},
+  args: {
+    disabled: false,
+  },
 };

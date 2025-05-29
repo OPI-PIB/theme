@@ -14,5 +14,7 @@ type Story = StoryObj<CheckboxComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Checkbox: Story = {
-  args: {},
+  args: {
+    disabled: false,
+  },
 };
