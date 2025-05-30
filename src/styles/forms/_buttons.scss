@@ -13,7 +13,7 @@
     line-height: var(--font__line-height-tight);
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 16px;
     padding: 8px 16px;
     height: var(--button-size);
     white-space: nowrap;
@@ -41,6 +41,7 @@
       --icon-font-size: var(--font__size-sm);
       --button-size: 30px;
       padding: 4px 8px;
+      gap: 8px;
     }
 
     &.size-lg {
@@ -48,6 +49,7 @@
       --icon-font-size: var(--font__size-lg);
       --button-size: 50px;
       padding: 12px 24px;
+      gap: 24px;
     }
 
     &.variant-primary:not(:disabled) {

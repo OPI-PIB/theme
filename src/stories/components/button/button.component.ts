@@ -9,28 +9,28 @@ import { Component, input } from "@angular/core";
     <div class="row">
       <button class="size-lg" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } large {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
 
       <button [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } medium {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
 
       <button class="size-sm" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } small {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
 
@@ -56,26 +56,26 @@ import { Component, input } from "@angular/core";
     <div class="row">
       <button class="variant-primary size-lg" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } large {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-primary" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } medium {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-primary size-sm" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } small {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button
@@ -104,26 +104,26 @@ import { Component, input } from "@angular/core";
     <div class="row">
       <button class="variant-secondary size-lg" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } large {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-secondary" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } medium {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-secondary size-sm" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } small {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button
@@ -152,26 +152,26 @@ import { Component, input } from "@angular/core";
     <div class="row">
       <button class="variant-transparent size-lg" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } large {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-transparent" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } medium {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button class="variant-transparent size-sm" [disabled]="disabled()">
         @if (iconsBefore()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         } small {{ label() }}
         @if (iconsAfter()) {
-        <span class="icon" aria-hidden="true">bug_report</span>
+        <span class="icon" aria-hidden="true">{{ icon() }}</span>
         }
       </button>
       <button
@@ -216,6 +216,8 @@ export class ButtonComponent {
   label = input.required<string>();
 
   disabled = input.required<boolean>();
+
+  icon = input.required<string>();
 
   iconsBefore = input.required<boolean>();
 

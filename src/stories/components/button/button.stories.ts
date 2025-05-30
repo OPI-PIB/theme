@@ -18,5 +18,6 @@ export const Button: Story = {
     iconsBefore: false,
     iconsAfter: false,
     label: "button",
+    icon: "bug_report",
   },
 };

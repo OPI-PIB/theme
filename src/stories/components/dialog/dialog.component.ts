@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-dialog",
@@ -13,18 +13,25 @@ import { Component, OnInit } from "@angular/core";
   `,
   styles: ``,
 })
-export class DialogComponent implements OnInit {
+export class DialogComponent implements OnInit, OnDestroy {
+  #dialog!: HTMLDialogElement;
+  #openBtn!: HTMLElement;
+  #closeBtn!: HTMLElement;
+
+  #onOpen = () => this.#dialog.showModal();
+  #onClose = () => this.#dialog.close();
+
   ngOnInit(): void {
-    const dialog = document.getElementById("myDialog") as HTMLDialogElement;
-    const openBtn = document.getElementById("openDialog");
-    const closeBtn = document.getElementById("closeDialog");
+    this.#dialog = document.getElementById("myDialog") as HTMLDialogElement;
+    this.#openBtn = document.getElementById("openDialog") as HTMLElement;
+    this.#closeBtn = document.getElementById("closeDialog") as HTMLElement;
 
-    openBtn?.addEventListener("click", () => {
-      dialog?.showModal();
-    });
+    this.#openBtn.addEventListener("click", this.#onOpen);
+    this.#closeBtn.addEventListener("click", this.#onClose);
+  }
 
-    closeBtn?.addEventListener("click", () => {
-      dialog.close();
-    });
+  ngOnDestroy(): void {
+    this.#openBtn.removeEventListener("click", this.#onOpen);
+    this.#closeBtn.removeEventListener("click", this.#onClose);
   }
 }
