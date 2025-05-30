@@ -25,7 +25,7 @@ import { Component, input } from "@angular/core";
       grid-template-columns: repeat(4, 1fr);
       gap: 15px;
     }
-    `,
+  `,
 })
 export class CheckboxComponent {
   disabled = input.required<boolean>();

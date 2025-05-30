@@ -5,7 +5,11 @@ import { ButtonComponent } from "./button.component";
 const meta: Meta<ButtonComponent> = {
   title: "Button",
   component: ButtonComponent,
-  argTypes: {},
+  argTypes: {
+    background: {
+      control: "color",
+    },
+  },
   args: {},
 };
 
@@ -19,5 +23,6 @@ export const Button: Story = {
     iconsAfter: false,
     label: "button",
     icon: "bug_report",
+    background: "#ecf900",
   },
 };

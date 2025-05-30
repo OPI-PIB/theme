@@ -149,7 +149,11 @@ import { Component, input } from "@angular/core";
       </button>
     </div>
     <p>Transparent</p>
-    <div class="row">
+    <div
+      class="row"
+      style="padding: 15px;"
+      [ngStyle]="{ backgroundColor: background() }"
+    >
       <button class="variant-transparent size-lg" [disabled]="disabled()">
         @if (iconsBefore()) {
         <span class="icon" aria-hidden="true">{{ icon() }}</span>
@@ -222,4 +226,6 @@ export class ButtonComponent {
   iconsBefore = input.required<boolean>();
 
   iconsAfter = input.required<boolean>();
+
+  background = input.required<string>();
 }
