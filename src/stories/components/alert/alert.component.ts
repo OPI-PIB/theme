@@ -9,7 +9,7 @@ import { Component, input } from "@angular/core";
       <span class="icon" aria-hidden="true">info</span>
       <div [innerHTML]="content()"></div>
       <button aria-label="Zamknij" class="variant-transparent variant-icon">
-        <span class="icon" aria-hidden="true">close</span>
+        <span class="icon-close" aria-hidden="true"></span>
       </button>
     </div>
     <p>Success</p>
@@ -17,7 +17,7 @@ import { Component, input } from "@angular/core";
       <span class="icon" aria-hidden="true">check_circle</span>
       <div [innerHTML]="content()"></div>
       <button aria-label="Zamknij" class="variant-transparent variant-icon">
-        <span class="icon" aria-hidden="true">close</span>
+        <span class="icon-close" aria-hidden="true"></span>
       </button>
     </div>
     <p>Warning</p>
@@ -25,7 +25,7 @@ import { Component, input } from "@angular/core";
       <span class="icon" aria-hidden="true">warning_amber</span>
       <div [innerHTML]="content()"></div>
       <button aria-label="Zamknij" class="variant-transparent variant-icon">
-        <span class="icon" aria-hidden="true">close</span>
+        <span class="icon-close" aria-hidden="true"></span>
       </button>
     </div>
     <p>Danger</p>
@@ -33,7 +33,7 @@ import { Component, input } from "@angular/core";
       <span class="icon" aria-hidden="true">highlight_off</span>
       <div [innerHTML]="content()"></div>
       <button aria-label="Zamknij" class="variant-transparent variant-icon">
-        <span class="icon" aria-hidden="true">close</span>
+        <span class="icon-close" aria-hidden="true"></span>
       </button>
     </div>
   `,

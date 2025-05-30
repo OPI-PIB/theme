@@ -14,7 +14,7 @@ import { FormsModule } from "@angular/forms";
       ></textarea>
     </div>
     <div class="field">
-      <label for="textareaRequiedId">Textarea</label>
+      <label for="textareaRequiedId">Textarea required</label>
       <textarea
         id="textareaRequiedId"
         placeholder="placeholder"
