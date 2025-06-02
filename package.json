@@ -20,6 +20,8 @@
     "README.md",
     "LICENSE"
   ],
+  "author": "Dawid Lubowiecki",
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
@@ -46,5 +48,9 @@
     "postcss-cli": "^11.0.1",
     "storybook": "^8.6.14",
     "typescript": "~5.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OPI-PIB/theme.git"
   }
 }
