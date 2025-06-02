@@ -1,4 +1,4 @@
-@layer theme {
+@layer opi-theme {
   input[type="checkbox"] {
     appearance: none;
     margin: 0 16px 0 0;
@@ -20,6 +20,9 @@
         var(--input-text);
       transform-origin: center center;
       clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      transition-property: var(--transition-property);
+      transition-timing-function: var(--transition-timing-function);
+      transition-duration: var(--transition-duration);
     }
 
     &:checked::before {

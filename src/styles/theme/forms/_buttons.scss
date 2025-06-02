@@ -1,4 +1,4 @@
-@layer theme {
+@layer opi-theme {
   button,
   input:where([type="button"], [type="reset"], [type="submit"]) {
     display: flex;
@@ -18,6 +18,9 @@
     height: var(--button-size);
     white-space: nowrap;
     cursor: pointer;
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
 
     &:hover {
       background-color: var(--button-background-hover);

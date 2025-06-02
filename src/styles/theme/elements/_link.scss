@@ -1,0 +1,16 @@
+@layer opi-theme {
+  a {
+    color: var(--link);
+    transition-property: var(--transition-property);
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+
+    &:visited {
+      color: var(--link-visited);
+    }
+
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+}

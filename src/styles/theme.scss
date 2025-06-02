@@ -1,19 +1,19 @@
-@use "typography/typography";
-@use "typography/headings";
-@use "typography/copy";
+@use "theme/typography/typography";
+@use "theme/typography/headings";
+@use "theme/typography/copy";
 
-@use "elements/accordion";
-@use "elements/alert";
-@use "elements/body";
-@use "elements/dialog";
-@use "elements/hr";
-@use "elements/icon";
-@use "elements/link";
-@use "elements/list";
-@use "elements/media";
-@use "elements/table";
+@use "theme/elements/accordion";
+@use "theme/elements/alert";
+@use "theme/elements/body";
+@use "theme/elements/dialog";
+@use "theme/elements/hr";
+@use "theme/elements/icon";
+@use "theme/elements/link";
+@use "theme/elements/list";
+@use "theme/elements/media";
+@use "theme/elements/table";
 
-@use "forms/buttons";
-@use "forms/fields";
-@use "forms/checkbox";
-@use "forms/radio";
+@use "theme/forms/buttons";
+@use "theme/forms/fields";
+@use "theme/forms/checkbox";
+@use "theme/forms/radio";

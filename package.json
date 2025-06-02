@@ -1,6 +1,7 @@
 {
-  "name": "angular-latest",
-  "version": "0.0.0",
+  "name": "@opi_pib/theme",
+  "version": "0.1.0",
+  "description": "Theme for web applications",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,6 +14,12 @@
     "build:css": "npm run _build:scss && npm run _postcss"
   },
   "private": true,
+  "files": [
+    "dist/styles/**",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",

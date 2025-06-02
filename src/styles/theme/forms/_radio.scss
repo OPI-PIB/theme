@@ -1,4 +1,4 @@
-@layer theme {
+@layer opi-theme {
   input[type="radio"] {
     appearance: none;
     margin: 0 16px 0 0;
@@ -16,6 +16,10 @@
       width: var(--radio-size);
       height: var(--radio-size);
       border-radius: 50%;
+      transform: scale(0);
+      transition-property: var(--transition-property);
+      transition-timing-function: var(--transition-timing-function);
+      transition-duration: var(--transition-duration);
     }
 
     &:checked::before {
