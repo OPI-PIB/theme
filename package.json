@@ -13,7 +13,6 @@
     "_postcss": "postcss dist/styles/*.css --dir dist/styles",
     "build:css": "npm run _build:scss && npm run _postcss"
   },
-  "private": true,
   "files": [
     "dist/styles/**",
     "package.json",
